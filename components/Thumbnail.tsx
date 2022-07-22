@@ -1,8 +1,7 @@
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 import React, { FC } from "react";
-import { Movie } from "../../typings";
-import { BASE_URL } from "../utils/requests";
+import { Movie } from "../types/Movie";
 
 const Thumbnail = ({ result }: { result: Movie }) => {
   return (
