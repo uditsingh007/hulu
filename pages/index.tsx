@@ -1,10 +1,28 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import { Movie } from "../../typings";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Results from "../components/Results";
-import requests, { BASE_URL } from "../utils/requests";
+import requests from "../utils/requests";
+
+export interface Movie {
+  title: string;
+  backdrop_path: string;
+  media_type?: string;
+  release_date?: string;
+  genre_ids: number[];
+  id: number;
+  original_language: string;
+  overview: string;
+  popularity: number;
+  poster_path: string;
+  vote_average: number;
+  vote_count: number;
+  adult: boolean;
+  video: boolean;
+  original_title: string;
+  name: string;
+  first_air_date: string;
+}
 
 const Home = ({ results }: { results: Movie[] }) => {
   return (
